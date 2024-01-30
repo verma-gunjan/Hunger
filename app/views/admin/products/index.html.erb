@@ -1,0 +1,9 @@
+<h1>All product</h1>
+<% @products.each do |product| %>
+    <h3><%= product.name %></h3>
+    <p><%= product.description %></p>
+    <p><%= product.price %></p>
+    <p>Category <%= product.category.name %></p>
+    <%= link_to "Edit" , edit_admin_product_path(product) %>
+    <%= button_to "Delete" , admin_product_path(product) , method: :delete,data: { confirm: "Are you sure?" }  %>
+<% end %>

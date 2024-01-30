@@ -1,0 +1,7 @@
+<h1>All categories</h1>
+<% @categories.each do |category| %>
+    <h3><%= category.name %></h3>
+    <p><%= category.description %></p>
+    <%= link_to "Edit" , edit_admin_category_path(category) %>
+    <%= button_to "Delete" , admin_category_path(category) , method: :delete,data: { confirm: "Are you sure?" }  %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>hey edit categories</h1>
+<%= form_with(model: @category, url:admin_category_path(@category),method: :patch,  data: {turbo: false}) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.submit "edit Category" %>
+<% end %>
